@@ -1,0 +1,40 @@
+# GEMDQM
+
+# 1. generate samples
+
+- to generate samples using for training
+```
+ cd gen
+ mkdir Samples
+ ./run.sh
+ python save_real.py 
+ mkdir data
+ python root_to_json.py
+```
+
+# 2. labeling with test data(at local)
+-
+```
+ mkdir image
+ python pad_to_png.py
+```
+move images to score/static/images
+```
+ cd score
+ mkdir -p static/images
+ python new_label.py
+```
+
+- go to `0.0.0.0:5000/label` to start scoring the data. After scoring, scp csv file to server
+
+```
+ ./label-merge.sh
+```
+- merge with this command
+# 3. training
+```
+ cd training
+ mkdir figures models-local
+ cd codes
+ python 4st_fix.py
+```
