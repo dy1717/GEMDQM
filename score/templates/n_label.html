@@ -1,0 +1,89 @@
+<head>
+ <link rel="stylesheet"
+       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+       crossorigin="anonymous">
+</head>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+  $("#allCheck").click(function(){
+    if($("#allCheck").prop("checked")) {
+      $("input[type=checkbox]").prop("checked",true);
+    }
+    else {
+      $("input[type=checkbox]").prop("checked",false);
+    }
+  })
+})
+</script>
+<body style="margin:50px">
+ <div class="row">
+  <div class="col-md-8">
+   Run number {{ run }}
+  </div>
+ </div>
+ <div class="row">
+  <div class="col-md-8">
+   <form action="/result" class="input-group">
+    <table border="0">
+     <tr>
+      <td rowspan="14">
+       <img src="{{ imgsrc }}" width="1000">
+      </td>
+      <td height="50px"></td>
+     </tr>
+       <tr>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf22" checked> vfat 22</span></td>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf23" checked> vfat 23</span></td>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf24" checked> vfat 24</span></td>
+       </tr>
+       <tr>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf19" checked> vfat 19</span></td>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf20" checked> vfat 20</span></td>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf21" checked> vfat 21</span></td>
+       </tr>
+       <tr>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf16" checked> vfat 16</span></td>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf17" checked> vfat 17</span></td>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf18" checked> vfat 18</span></td>
+       </tr>
+       <tr>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf13" checked> vfat 13</span></td>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf14" checked> vfat 14</span></td>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf15" checked> vfat 15</span></td>
+       </tr>
+       <tr>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf10" checked> vfat 10</span></td>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf11" checked> vfat 11</span></td>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf12" checked> vfat 12</span></td>
+       </tr>
+       <tr>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf07" checked> vfat 07</span></td>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf08" checked> vfat 08</span></td>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf09" checked> vfat 09</span></td>
+       </tr>
+       <tr>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf04" checked> vfat 04</span></td>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf05" checked> vfat 05</span></td>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf06" checked> vfat 06</span></td>
+       </tr>
+       <tr>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf01" checked> vfat 01</span></td>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf02" checked> vfat 02</span></td>
+         <td class="dummy"><span class="input-group-addon"><input type="checkbox" name="vf03" checked> vfat 03</span></td>
+       </tr>
+       <tr>
+         <td rowspan="14"><input type="checkbox" id="allCheck" checked>Check All</td>
+       </tr>
+     <tr><td height="50px"></td></tr>
+    </table>
+   </div>
+  </div>
+  <div class="row">
+   <div class="col-md-2"><input type= "hidden" value="{{ id }}" name="idplot"></div>
+   <div class="col-md-3"><input class="btn btn-sm btn-warning" type="submit"></div>
+   <div class="col-md-3"><a class="btn btn-sm btn-info" href="/label/">SKIP</a></div>
+  </div>
+ </form>
+</body>
