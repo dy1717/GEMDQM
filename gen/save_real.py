@@ -6,11 +6,11 @@ import random
 ### extract some data from real data ###
 
 for run in range(1000,1100):
-    for _, _, filenames in os.walk('goodData2'):
+    for _, _, filenames in os.walk('dqmData'):
         filenames = [f for f in filenames if (str(run) + '.root') in f]
         if len(filenames) == 0:
             raise Exception
-        _file = 'goodData2/' + filenames[0]
+        _file = 'dqmData/' + filenames[0]
     
         for chamber in [27,28,29,30]:
             for layer in [1,2]:
