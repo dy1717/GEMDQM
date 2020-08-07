@@ -13,12 +13,13 @@
 ```
 
 # 2. labeling with test data(at local)
--
+
+- move images to score/static/images
 ```
  mkdir image
  python pad_to_png.py
 ```
-move images to score/static/images
+
 ```
  cd score
  mkdir -p static/images
@@ -26,11 +27,11 @@ move images to score/static/images
 ```
 
 - go to `0.0.0.0:5000/label` to start scoring the data. After scoring, scp csv file to server
-
+- merge with this command
 ```
  ./label-merge.sh
 ```
-- merge with this command
+
 # 3. training
 ```
  cd training
