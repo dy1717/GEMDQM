@@ -10,6 +10,7 @@
  python save_real.py 
  mkdir data
  python root_to_json.py
+ mv -r data training
 ```
 
 # 2. labeling with test data(at local)
