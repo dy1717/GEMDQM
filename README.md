@@ -36,7 +36,7 @@
 # 3. training
 ```
  cd training
- mkdir figures models-local
+ mkdir figures models-local data // move json and csv file to data directory
  cd codes
  python 4st_fix.py
 ```
